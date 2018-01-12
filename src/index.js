@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {HashRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import './index.css';
 import App from './components/App';
@@ -25,14 +25,14 @@ firebase.initializeApp(config);
 
 render(
   <div>
-    <HashRouter>
+    <BrowserRouter>
       <Switch>
         <Route exact path="/" component={App}/>
         <Route path="/category/:category" component={App}/>
         <Route path="/signup" component={SignUp}/>
         <Route path="/favorites" component={Favorites}/>
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   </div>,
   document.getElementById('root')
 );
