@@ -2,7 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import {HashRouter, Route, Switch} from 'react-router-dom'
 
-import './index.css';
+import './App.css';
 import App from './components/App';
 import SignUp from './components/SignUp';
 import Favorites from "./components/Favorites";

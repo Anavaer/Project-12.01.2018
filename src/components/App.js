@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../App.css';
+
 import Nav from "./Nav";
 import Section from "./Section";
 import Header from "./Header";
@@ -71,5 +71,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
