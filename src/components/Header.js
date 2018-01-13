@@ -4,6 +4,18 @@ import SearchForm from "./SearchForm";
 import {Link} from 'react-router-dom';
 
 class Header extends React.Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+    }
+  }
+  
+  componentWillReceiveProps(nextProps) {
+    this.setState({userLoggedIn: nextProps.userLoggedIn})
+  }
+  
   render() {
     return (
       <div className="header">
@@ -13,7 +25,7 @@ class Header extends React.Component {
             search={this.props.search}
           />
           <UserPanel
-            userLoggedIn={this.props.userLoggedIn}
+            userLoggedIn={this.state.userLoggedIn || ''}
           />
         </div>
       </div>

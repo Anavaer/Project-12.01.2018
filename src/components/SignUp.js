@@ -19,7 +19,6 @@ class SignUp extends React.Component {
     if (this.pass1.value === this.pass2.value) {
       firebase.auth().createUserWithEmailAndPassword(this.login.value, this.pass2.value)
         .then(user => {
-          console.log(user);
           if (user != null) {
             firebase.database().ref('users/' + user.uid).set({
               email: user.email,

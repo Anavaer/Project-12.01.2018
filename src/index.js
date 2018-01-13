@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {HashRouter, Route, Switch} from 'react-router-dom'
 
 import './index.css';
 import App from './components/App';
@@ -21,18 +21,19 @@ const config = {
 };
 
 firebase.initializeApp(config);
+const repo = `/${window.location.pathname.split('/')[1]}`;
 
 
 render(
   <div>
-    <BrowserRouter>
+    <HashRouter basename={repo}>
       <Switch>
         <Route exact path="/" component={App}/>
         <Route path="/category/:category" component={App}/>
         <Route path="/signup" component={SignUp}/>
         <Route path="/favorites" component={Favorites}/>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   </div>,
   document.getElementById('root')
 );
