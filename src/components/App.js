@@ -30,7 +30,6 @@ class App extends Component {
   }
 
   userLoggedIn = () => {
-    console.log('asdasd');
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({isLoggedIn: true, user: user});
@@ -52,8 +51,8 @@ class App extends Component {
     return (
       <div className="content">
         <Header
-          userLoggedIn={this.userLoggedIn && this.userLoggedIn}
           search={this.searchForVids}
+          isLoggedIn={this.state.isLoggedIn}
         />
         <div className="main">
           <div className="container-rwd">

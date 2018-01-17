@@ -51,7 +51,7 @@ class SignUp extends React.Component {
       <div className="content">
         <Header/>
         <div className="main">
-          <div className="container">
+          <div className="container-rwd">
             <Nav/>
             <div className="section section--bordered">
               <form ref={form => this.form = form} className="signUp-form" onSubmit={this.checkSignUp}>

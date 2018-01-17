@@ -6,11 +6,11 @@ import * as firebase from 'firebase';
 
 class UserPanel extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      isLoggedIn: false
+      isLoggedIn: this.props.isLoggedIn
     }
   }
 
@@ -26,7 +26,6 @@ class UserPanel extends React.Component {
     firebase.auth().signOut().then(() => {
       this.setState({isLoggedIn: false, email: null})
     })
-      .then(this.props.userLoggedIn())
       .catch(function (error) {
         // An error happened.
       });

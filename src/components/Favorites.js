@@ -47,7 +47,7 @@ class Favorites extends React.Component {
           search={this.searchForVids}
         />
         <div className="main">
-          <div className="container">
+          <div className="container-rwd">
             <Nav/>
             <FavoriteList
               user={this.state.user}

@@ -25,7 +25,7 @@ class Header extends React.Component {
             search={this.props.search}
           />
           <UserPanel
-            userLoggedIn={this.state.userLoggedIn || ''}
+            isLoggedIn={this.props.isLoggedIn}
           />
         </div>
       </div>

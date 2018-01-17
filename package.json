@@ -2,7 +2,7 @@
   "name": "first-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Anavaer.github.io/Project-12.01.2018-build",
+  "homepage": "https://anavaer.github.io/Project-12.01.2018",
   "dependencies": {
     "firebase": "^4.8.1",
     "gh-pages": "^1.1.0",
